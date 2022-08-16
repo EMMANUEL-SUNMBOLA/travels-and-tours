@@ -1,0 +1,298 @@
+$primary-color:#ffa500;
+$secondary-color:#fff;
+$highlight:springgreen;
+$nav-bg:#333333;
+$but-bg:transparent;
+$button-padding:10px 20px;
+$button-border:1px solid $primary-color;
+$but-bd-rad:10px;
+$transition:.5s;
+$font-weights:(
+  "light":200,
+  "bold":400,
+  "bolder":800,
+);
+$font-size:(
+  "small":10px,
+  "big":20px,
+  "large":25px,
+);
+
+body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+   button{
+    padding: $button-padding;
+    border: $button-border;
+    border-radius: $but-bd-rad;
+    background: $primary-color;
+    cursor: none ;
+  
+    &:hover{
+      border:1px solid $primary-color;
+      background-color: $but-bg;
+      color: $secondary-color;
+      transition: $transition;
+    }
+    &:focus{
+     background:$highlight;
+     border: 0;
+   }
+  }
+
+}
+nav{
+  background-color: $nav-bg;
+  .navbar-brand{
+    cursor: default;
+  }
+  & #jerk{
+    color: $secondary-color;
+  }
+  & span{
+   color: $primary-color;
+  }
+  & .nav-link{
+    color: $secondary-color;
+    font-weight: map-get($map: $font-weights, $key:light);
+  }
+  & .nav-link:hover{
+    color: $primary-color;
+    transition: $transition;
+  }
+}
+
+
+main{
+  height: 100vh;
+  padding-top: 250px;
+
+  & video{
+    width: 1350px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+#packages{
+  #s1{
+    border: 1px solid $primary-color;
+    padding: 7px 7px;
+    cursor:default ;
+    background: $primary-color;
+  }
+  h1:hover{
+    #s1{
+      background: $highlight;
+      transition: $transition;
+    }
+   }
+   .card{
+    height: 500px;
+    button:hover{
+     color: $primary-color;
+     & .fa-solid{
+      color: $primary-color;
+     }
+    }
+   }
+   .fas{
+    color: $primary-color;
+   }
+   .fa-solid{
+    color: $secondary-color;
+   }
+}
+#book{ 
+  #s1{
+    border: 1px solid $primary-color;
+    padding: 7px 7px;
+    cursor:default ;
+    background: $primary-color;
+   }
+   #s2{
+    color: red;
+    font-weight: map-get($map: $font-weights, $key:bolder );
+   }
+   h1:hover{
+    #s1{
+      background: $highlight;
+      transition: $transition;
+    }
+   }
+  #form-container{
+    padding-left: 20px;
+    width: 500px;
+    & input{
+      width: 80%;
+      font-size: map-get($map: $font-size, $key:big );
+      border: 1px solid $primary-color;
+    }
+    & button:hover{
+     color: $primary-color;
+     background: $secondary-color;
+    }
+    & button:focus{
+      background:$highlight;
+      border: 0;
+    }
+  }
+
+  & img{
+    width: 500px;
+    margin-left: 620px;
+    margin-top: -450px;
+  }
+}
+#services{
+  .fa-solid{
+    color: $primary-color;
+  }
+  .box:hover{
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  }
+  #s1{
+    border: 1px solid $primary-color;
+    padding: 7px 7px;
+    cursor:default ;
+    background: $primary-color;
+  }
+  h1:hover{
+    #s1{
+      background: $highlight;
+      transition: $transition;
+    }
+   }
+}
+#reviews{
+  #s1{
+    border: 1px solid $primary-color;
+    padding: 7px 7px;
+    cursor:default ;
+    background: $primary-color;
+   }
+   h1:hover{
+    #s1{
+      background: $highlight;
+      transition: $transition;
+    }
+  }
+  .blockquote-footer{
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .fa-solid{
+      color: $primary-color;
+    }
+  }
+}
+#contact{
+  #s1{
+    border: 1px solid $primary-color;
+    padding: 7px 7px;
+    cursor:default ;
+    background: $primary-color;
+   }
+   h1:hover{
+    #s1{
+      background: $highlight;
+      transition: $transition;
+    }
+  }
+  .form-container{
+    margin-top: 100px;
+    width: 50%;
+    text-align: center;
+    input{
+      border: 1px solid $primary-color;
+      border-radius: $but-bd-rad;
+      width: 45%;
+      padding-right:20px ;
+      height: 30px;
+      padding-left:20px;
+    }
+    #mesg{
+      width: 90%;
+      height:100px;
+      margin-top: 12px;
+    }
+    button{
+      text-transform: uppercase;
+      &:hover{
+        background: $secondary-color;
+        color: $primary-color;
+      }
+    }
+  }
+  img{
+    width: 500px;
+    height: 500px;
+    margin-left:700px ;
+  margin-top: -350px;
+  }
+}
+footer{
+  .fa-solid{
+    text-decoration: none;
+    margin-left: 700px;
+    &:hover{
+      color: green;
+    }
+  }
+}
+@media(max-width:600px){
+main{
+  text-align: center;
+  background: $primary-color;
+  height: 50vh;
+  padding-top: 60px;
+  & video{
+    display: none;
+  }
+
+  & button{
+    background:$secondary-color;
+  }
+  & button:hover{
+    background: $primary-color;
+    border: 1px solid $secondary-color;
+    transition: $transition;
+  }
+}
+#book{
+ & #form-container{
+    text-align: center;
+    width: 100%;
+    & input{
+      width: 80%;
+    }
+    & button:hover{
+     color: $primary-color;
+    }
+  }
+  & img{
+    display: none;
+  }
+}
+#packages{
+ .card{
+  margin-left: 100px;
+  margin-top: 10px;
+  columns: 2;
+  }
+}
+#contact{
+  .form-container{
+    width: 100%;
+    input{
+      width: 90%;
+    }
+  }
+  img{
+    display: none;
+  }
+}
+}
